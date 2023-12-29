@@ -7,7 +7,7 @@ import second.bite.utils.MainClass;
 
 public class TokenTest extends MainClass {
 	
-	@Test (groups = {"t1", "d1", "p1"} ,priority = 0, enabled = true, description = "Send Post Call to Generate Token")
+	@Test (groups = {""} ,priority = 0, enabled = true, description = "Send Post Call to Generate Token")
 	public void sendPostCallToToken() {
 		TokenPage.sendPostToToken();
 	}

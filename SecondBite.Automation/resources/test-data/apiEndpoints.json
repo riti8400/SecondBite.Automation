@@ -1,5 +1,8 @@
 {
- "sfTokenData": {
-    "postSfTokenBasePath": "/auth/login"
+ "tokenData": {
+    "postTokenBasePath": "/auth/login"
+  },
+  "foodItemData": {
+    "getFoodItemBasePath": "/foodItems"
   }
 }
