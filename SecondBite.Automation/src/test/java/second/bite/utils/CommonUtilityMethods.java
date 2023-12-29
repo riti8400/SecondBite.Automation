@@ -11,7 +11,7 @@ public class CommonUtilityMethods extends MainClass {
 	 */
 	public static RequestSpecification tokenRequestSpec() {
 		RequestSpecBuilder builder = new RequestSpecBuilder();
-		builder.setBaseUri(System.getenv("baseUri"));
+		builder.setBaseUri(property.getProperty("baseUri"));
 		builder.setContentType(ContentType.JSON);
 		return builder.build();
 	}
