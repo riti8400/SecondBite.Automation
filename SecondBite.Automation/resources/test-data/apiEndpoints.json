@@ -1,0 +1,8 @@
+{
+ "tokenData": {
+    "postTokenBasePath": "/auth/login"
+  },
+  "foodItemData": {
+    "getFoodItemBasePath": "/foodItems"
+  }
+}
