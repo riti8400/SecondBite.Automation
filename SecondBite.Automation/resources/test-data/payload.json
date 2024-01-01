@@ -2,5 +2,13 @@
 "LoginPayload": {
     "email":"wedeprattame-6415@yopmail.com",
     "password":"test@123#"
+  },
+  "CreateFoodItemPayload": {
+    "name" : "Chocolates",
+    "description": "Tasty Chocolates",
+    "quantity":4,
+    "expiry_date":"2024-12-12",
+    "dietary_restrictions":"N/A",
+    "image_url":"N/A"
   }
 }

@@ -13,8 +13,6 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import org.json.JSONObject;
 
-import io.restassured.mapper.ObjectMapper;
-
 public class JsonManager extends MainClass {
 	
 	private static FileWriter fileWriter;
