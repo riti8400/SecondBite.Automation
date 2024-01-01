@@ -4,5 +4,8 @@
   },
   "foodItemData": {
     "getFoodItemBasePath": "/foodItems"
+  },
+  "createFoodItemData": {
+    "postFoodItemBasePath": "/foodItems/create"
   }
 }

@@ -1,5 +1,8 @@
 package second.bite.utils;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 import org.json.JSONObject;
 
 import io.restassured.builder.RequestSpecBuilder;
@@ -32,5 +35,30 @@ public class CommonUtilityMethods extends MainClass {
 		return apiResult;
 	}
 
+	/**
+	 * A method to create dynamic payload for food item
+	 */
+	public static String createDynamicFoodItemPayload(int limit, ArrayList<String> keys, String attribute) {
+		String data = JsonManager.readJsonFile(property.getProperty("payloadJsonPath"),attribute).toString();
+		JSONObject jObject = new JSONObject(data);
+		for (String key : keys) {
+			if(!jObject.has(key)) continue;
+			switch (key){
+			case "name":
+				jObject.put(key, (jObject.get(key)+generateRandomNumber(limit))); break;
+			case "quantity":
+				jObject.put(key,generateRandomNumber(2)); break;
+			default: break;
+			}
+		}
+		return jObject.toString();
+	}
+	
+	/**
+	 * A method to generate random number as string
+	 */
+	public static String generateRandomNumber(int limit) {
+		return String.format("%0"+limit+"d",new Random().nextInt((int)Math.pow(10,limit)));
+	}
 
 }

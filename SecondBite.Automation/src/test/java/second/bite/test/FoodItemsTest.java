@@ -11,5 +11,10 @@ public class FoodItemsTest extends MainClass{
 	public void getFoodItems() {
 		FoodItemsPage.getFoodItems();
 	}
+	
+	@Test (groups = {""} ,priority = 0, enabled = true, description = "Send Post Call For Food Items")
+	public void postFoodItems() {
+		FoodItemsPage.postFoodItems();
+	}
 
 }
